@@ -14,16 +14,16 @@ public class ApiTest {
 	 public static void main( String[] args ) throws Exception
 	  {
 		// Host url
-	      String host = "https://mashape-community-urban-dictionary.p.rapidapi.com/define";
+	      String host = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/";
 	      String charset = "UTF-8";
 	      // Headers for a request
-	      String x_rapidapi_host = "mashape-community-urban-dictionary.p.rapidapi.com";
-	      String x_rapidapi_key = ;//Type here your key
+	      String x_rapidapi_host = "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com";
+	      String x_rapidapi_key = "";//Type here your key
 	     
 	   
 	    	      
 	    // Host, charset and headers vars should be the same
-	    	      String i = "buck";
+	    	      String orgin = "PVD-sky/";
 	    	  // Format query for preventing encoding problems
 	    	      String query = String.format("term=%s", // change this to 'response' code snipped from unirest ; define?term=buck '
 	    	   	       URLEncoder.encode(i, charset));      
@@ -32,7 +32,12 @@ public class ApiTest {
 	    	      .header("x-rapidapi-host", x_rapidapi_host)
 	    	      .header("x-rapidapi-key", x_rapidapi_key)
 	    	      .asJson();
-	    	  //Prettifying
+	    	     
+	    	      //gives response code
+//	    	      System.out.println(response.getStatus());
+//	    	      System.out.println(response.getHeaders().get("Content-Type"));
+	    	 
+	    	      //Prettifying
 	    	      Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	    	      JsonParser jp = new JsonParser();
 	    	      JsonElement je = jp.parse(response.getBody().toString());
