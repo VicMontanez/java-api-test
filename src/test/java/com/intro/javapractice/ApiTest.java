@@ -23,14 +23,14 @@ public class ApiTest {
 	   
 	    	      
 	    // Host, charset and headers vars should be the same
-	    	      String orgin = "PVD-sky/";
-	    	      String destination = "JFK-sky/";
+	    	      String orgin = "PVD-sky";
+	    	      String destination = "JFK-sky";
 	    	      String time = "anytime";
 	    	  // Format query for preventing encoding problems
 	    	      String query = String.format("inboundpartialdate=", // change this to 'response' code snipped from unirest ; define?term=buck '
 	    	   	       URLEncoder.encode(time, charset));      
 	    	      // Json response
-	    	      HttpResponse <JsonNode> response = Unirest.get(host + orgin + destination + time + "?" + query)
+	    	      HttpResponse <JsonNode> response = Unirest.get(host + orgin + "/" + destination + "/" + time + "?" + query)
 	    	      .header("x-rapidapi-host", x_rapidapi_host)
 	    	      .header("x-rapidapi-key", x_rapidapi_key)
 	    	      .asJson();
