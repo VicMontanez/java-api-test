@@ -36,15 +36,15 @@ public class ApiTest {
 	    	      .asJson();
 	    	     
 	    	      //gives response code
-	    	      System.out.println(response.getStatus());
-   	      System.out.println(response.getHeaders().get("Content-Type"));
+	    	     // System.out.println(response.getStatus());
+   	    //  System.out.println(response.getHeaders().get("Content-Type"));
 	    	 
 	    	      //Prettifying
-//	    	      Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//	    	      JsonParser jp = new JsonParser();
-//	    	      JsonElement je = jp.parse(response.getBody().toString());
-//	    	      String prettyJsonString = gson.toJson(je);
-//	    	      System.out.println(prettyJsonString);
+	    	      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	    	      JsonParser jp = new JsonParser();
+	    	      JsonElement je = jp.parse(response.getBody().toString());
+	    	      String prettyJsonString = gson.toJson(je);
+	    	      System.out.println(prettyJsonString);
 	  
 	  }
 
