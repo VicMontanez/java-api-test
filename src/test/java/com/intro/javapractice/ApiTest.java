@@ -30,7 +30,7 @@ public class ApiTest {
 	    	      String query = String.format("inboundpartialdate=", // change this to 'response' code snipped from unirest ; define?term=buck '
 	    	   	       URLEncoder.encode(time, charset));      
 	    	      // Json response
-	    	      HttpResponse <JsonNode> response = Unirest.get(host + "?" + query)
+	    	      HttpResponse <JsonNode> response = Unirest.get(host + orgin + destination + time + "?" + query)
 	    	      .header("x-rapidapi-host", x_rapidapi_host)
 	    	      .header("x-rapidapi-key", x_rapidapi_key)
 	    	      .asJson();
