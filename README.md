@@ -1,1 +1,1 @@
-# Projects
+# Java API & DB practice
